@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document Object Example</title>
+    <script>
+        function changeContent() {
+            // Using document properties
+            document.title = "Updated Title";
+
+            // Using document methods
+            document.getElementById("para").innerHTML = "Text changed using getElementById()";
+
+            document.getElementsByTagName("h2")[0].style.color = "blue";
+
+            document.getElementsByClassName("box")[0].style.backgroundColor = "yellow";
+        }
+    </script>
+</head>
+<body>
+
+    <h2>Document Object Demo</h2>
+
+    <p id="para">Original Text</p>
+
+    <div class="box" style="width:200px; height:50px; border:1px solid black;">
+        Box Element
+    </div>
+
+    <br>
+
+    <button onclick="changeContent()">Click Me</button>
+
+</body>
+</html>

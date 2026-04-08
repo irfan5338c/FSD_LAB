@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RegExp Object Example</title>
+    <script>
+        function regexDemo() {
+
+            let str = "Hello 123 World 456";
+
+            // Creating RegExp
+            let pattern = /\d+/g;   // matches numbers
+
+            // Properties
+            let globalProp = pattern.global;     // true if 'g' flag is used
+            let ignoreCaseProp = pattern.ignoreCase; // false here
+
+            // Methods
+            let testResult = pattern.test(str);     // true/false
+            let matchResult = str.match(pattern);   // returns matched values
+            let replaceResult = str.replace(pattern, "NUM"); // replace numbers
+
+            // Display results
+            document.getElementById("output").innerHTML =
+                "Original String: " + str + "<br>" +
+                "Global Property: " + globalProp + "<br>" +
+                "Ignore Case Property: " + ignoreCaseProp + "<br>" +
+                "Test Result (has numbers?): " + testResult + "<br>" +
+                "Matched Numbers: " + matchResult + "<br>" +
+                "After Replace: " + replaceResult;
+        }
+    </script>
+</head>
+<body>
+
+    <h2>RegExp Object Demo</h2>
+
+    <button onclick="regexDemo()">Run RegExp Example</button>
+
+    <p id="output"></p>
+
+</body>
+</html>

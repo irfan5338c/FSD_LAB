@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Array Object Example</title>
+    <script>
+        function arrayDemo() {
+
+            // Creating an array
+            let arr = ["Apple", "Banana", "Mango"];
+
+            // Property: length
+            let len = arr.length;
+
+            // Methods
+            arr.push("Orange");        // add element at end
+            arr.pop();                 // remove last element
+            arr.unshift("Grapes");     // add at beginning
+            arr.shift();               // remove first element
+
+            let index = arr.indexOf("Banana"); // find index 
+            let joined = arr.join(", ");       // join elements
+h
+            // Display results
+            document.getElementById("output").innerHTML =
+                "Array Elements: " + arr + "<br>" +
+                "Length: " + len + "<br>" +
+                "Index of Banana: " + index + "<br>" +
+                "Joined Array: " + joined;
+        }
+    </script>
+</head>
+<body>
+
+    <h2>Array Object Demo</h2>
+
+    <button onclick="arrayDemo()">Show Array Operations</button>
+
+    <p id="output"></p>
+
+</body>
+</html>

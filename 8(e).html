@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Armstrong Number</title>
+    <script>
+        function checkArmstrong() {
+
+            let num = parseInt(prompt("Enter a number:"));
+            let original = num;
+            let sum = 0;
+
+            while (num > 0) {
+                let digit = num % 10;       // get last digit
+                sum += digit * digit * digit; // cube of digit
+                num = Math.floor(num / 10); // remove last digit
+            }
+
+            if (sum === original) {
+                document.getElementById("output").innerHTML =
+                    original + " is an Armstrong Number";
+            } else {
+                document.getElementById("output").innerHTML =
+                    original + " is NOT an Armstrong Number";
+            }
+        }
+    </script>
+</head>
+<body onload="checkArmstrong()">
+
+    <h2>Armstrong Number Check</h2>
+
+    <p id="output"></p>
+
+</body>
+</html>

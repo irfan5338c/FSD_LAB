@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Background Image Tilt</title>
+    <style>
+        body {
+            margin: 0;
+            height: 200vh; /* to enable scrolling */
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 50%;               /* halfway down the page */
+            left: 0;
+            width: 100%;
+            height: 300px;
+            background-image: url("moscov - infrerno wyrmlord.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            transform: translateY(-50%) rotate(-10deg); /* tilt */
+            z-index: -1;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        p {
+            padding: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Fixed Tilted Background Image</h1>
+
+    <p>
+        Scroll down to see the effect. The background image stays fixed,
+        appears halfway down the page, and is slightly tilted horizontally.
+    </p>
+
+    <p>
+        This is achieved using a pseudo-element (::before) with fixed positioning.
+    </p>
+
+</body>
+</html>

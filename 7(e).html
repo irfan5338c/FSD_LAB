@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>String Object Example</title>
+    <script>
+        function stringDemo() {
+
+            let str = "Hello World";
+
+            // Property
+            let len = str.length;
+
+            // Methods
+            let upper = str.toUpperCase();
+            let lower = str.toLowerCase();
+            let char = str.charAt(1);
+            let index = str.indexOf("World");
+            let sliceStr = str.slice(0, 5);
+            let replaceStr = str.replace("World", "JavaScript");
+
+            // Display results
+            document.getElementById("output").innerHTML =
+                "Original String: " + str + "<br>" +
+                "Length: " + len + "<br>" +
+                "Uppercase: " + upper + "<br>" +
+                "Lowercase: " + lower + "<br>" +
+                "Character at index 1: " + char + "<br>" +
+                "Index of 'World': " + index + "<br>" +
+                "Slice (0,5): " + sliceStr + "<br>" +
+                "After Replace: " + replaceStr;
+        }
+    </script>
+</head>
+<body>
+
+    <h2>String Object Demo</h2>
+
+    <button onclick="stringDemo()">Show String Operations</button>
+
+    <p id="output"></p>
+
+</body>
+</html>

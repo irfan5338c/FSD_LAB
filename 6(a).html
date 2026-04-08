@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>Internal JavaScript Example</title>
+</head>
+<body>
+    <h2>Internal JavaScript</h2>
+    <p id="internal-demo">Original content.</p>
+    <button onclick="changeInternalContent()">Click Me (Internal)</button>
+
+    <!-- Internal JavaScript code -->
+    <script>
+        function changeInternalContent() {
+            document.getElementById("internal-demo").innerHTML = "Content changed by internal JavaScript!";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Date Object Example</title>
+    <script>
+        function dateDemo() {
+
+            // Create Date object
+            let today = new Date();
+
+            // Date methods
+            let date = today.getDate();
+            let month = today.getMonth() + 1; // months start from 0
+            let year = today.getFullYear();
+
+            let hours = today.getHours();
+            let minutes = today.getMinutes();
+            let seconds = today.getSeconds();
+
+            let day = today.getDay(); // 0 = Sunday
+
+            // Display results
+            document.getElementById("output").innerHTML =
+                "Current Date: " + date + "/" + month + "/" + year + "<br>" +
+                "Current Time: " + hours + ":" + minutes + ":" + seconds + "<br>" +
+                "Day of Week (0=Sun): " + day;
+        }
+    </script>
+</head>
+<body>
+
+    <h2>Date Object Demo</h2>
+
+    <button onclick="dateDemo()">Show Date & Time</button>
+
+    <p id="output"></p>
+
+</body>
+</html>

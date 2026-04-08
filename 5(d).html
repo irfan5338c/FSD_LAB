@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Model Explained</title>
+    <style>
+        .box-model-example {
+            /* 1. Content Area size defined by width/height */
+            width: 200px;
+            height: 100px;
+            background-color: #e0f7fa; /* Light blue background for content */
+            color: #00796b;
+            text-align: center;
+            padding: 20px; /* 2. Inner spacing around content */
+            border: 5px solid #004d40; /* 3. The line around padding/content */
+            margin: 30px; /* 4. Outer spacing between boxes */
+            box-sizing: border-box; /* Ensures width includes padding and border */
+        }
+        
+        body {
+            font-family: sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            border: 2px dashed #d32f2f;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Understanding the CSS Box Model</h1>
+
+    <div class="container">
+        <h2>Box 1: With all components</h2>
+        <div class="box-model-example">
+            <strong>Content Area</strong>
+            <p>Width: 200px</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Box 2: Demonstrating Margin (outer space)</h2>
+        <div class="box-model-example" style="margin: 0;">
+            This box has <strong>zero margin</strong>. Notice how it sits closer to the compared to Box 1.
+        </div>
+    </div>
+
+</body>
+</html>

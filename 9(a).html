@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Number Functions</title>
+    <script>
+
+        // Factorial Function
+        function factorial(n) {
+            let fact = 1;
+            for (let i = 1; i <= n; i++) {
+                fact *= i;
+            }
+            return fact;
+        }
+
+        // Fibonacci Function
+        function fibonacci(n) {
+            let a = 0, b = 1, result = "";
+            while (a <= n) {
+                result += a + " ";
+                let temp = a + b;
+                a = b;
+                b = temp;
+            }
+            return result;
+        }
+
+        // Prime Numbers Function
+        function primes(n) {
+            let result = "";
+            for (let i = 2; i <= n; i++) {
+                let isPrime = true;
+                for (let j = 2; j <= i / 2; j++) {
+                    if (i % j === 0) {
+                        isPrime = false;
+                        break;
+                    }
+                }
+                if (isPrime) {
+                    result += i + " ";
+                }
+            }
+            return result;
+        }
+
+        // Palindrome Function
+        function isPalindrome(n) {
+            let original = n;
+            let reverse = 0;
+
+            while (n > 0) {
+                let digit = n % 10;
+                reverse = reverse * 10 + digit;
+                n = Math.floor(n / 10);
+            }
+
+            return original === reverse;
+        }
+
+        function processNumber() {
+            let num = parseInt(prompt("Enter a number:"));
+
+            let fact = factorial(num);
+            let fib = fibonacci(num);
+            let primeList = primes(num);
+            let palindrome = isPalindrome(num);
+
+            document.getElementById("output").innerHTML =
+                "Number: " + num + "<br>" +
+                "Factorial: " + fact + "<br>" +
+                "Fibonacci up to " + num + ": " + fib + "<br>" +
+                "Prime numbers up to " + num + ": " + primeList + "<br>" +
+                "Palindrome: " + (palindrome ? "Yes" : "No");
+        }
+
+    </script>
+</head>
+<body onload="processNumber()">
+
+    <h2>Number Operations using Functions</h2>
+
+    <p id="output"></p>
+
+</body>
+</html>

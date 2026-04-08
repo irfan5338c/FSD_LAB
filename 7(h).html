@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Defined Object</title>
+    <script>
+        // Constructor
+        function Person(name, age) {
+            this.name = name;   // property
+            this.age = age;     // property
+
+            // Method
+            this.greet = function() {
+                return "Hello, my name is " + this.name;
+            }
+        }
+
+        // Adding accessor using prototype
+        Object.defineProperty(Person.prototype, "details", {
+            get: function() {
+                return this.name + " is " + this.age + " years old";
+            },
+            set: function(value) {
+                let parts = value.split(" ");
+                this.name = parts[0];
+                this.age = parts[1];
+            }
+        });
+
+        function showObject() {
+            // Create object using constructor
+            let p1 = new Person("Irfan", 20);
+
+            // Using setter
+            p1.details = "Alex 22";
+
+            // Display output
+            document.getElementById("output").innerHTML =
+                "Name: " + p1.name + "<br>" +
+                "Age: " + p1.age + "<br>" +
+                "Method Output: " + p1.greet() + "<br>" +
+                "Accessor Output: " + p1.details;
+        }
+    </script>
+</head>
+<body>
+
+    <h2>User Defined Object Demo</h2>
+
+    <button onclick="showObject()">Show Details</button>
+
+    <p id="output"></p>
+
+</body>
+</html>

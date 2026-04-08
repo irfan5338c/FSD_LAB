@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Math Object Example</title>
+    <script>
+        function mathDemo() {
+
+            let num = 25.7;
+
+            // Math properties
+            let piValue = Math.PI;
+            let eValue = Math.E;
+
+            // Math methods
+            let sqrtVal = Math.sqrt(25);
+            let powerVal = Math.pow(2, 3);
+            let roundVal = Math.round(num);
+            let ceilVal = Math.ceil(num);
+            let floorVal = Math.floor(num);
+            let randomVal = Math.random();
+
+            // Display results
+            document.getElementById("output").innerHTML =
+                "Value of PI: " + piValue + "<br>" +
+                "Value of E: " + eValue + "<br>" +
+                "Square Root of 25: " + sqrtVal + "<br>" +
+                "2 Power 3: " + powerVal + "<br>" +
+                "Round: " + roundVal + "<br>" +
+                "Ceil: " + ceilVal + "<br>" +
+                "Floor: " + floorVal + "<br>" +
+                "Random Number: " + randomVal;
+        }
+    </script>
+</head>
+<body>
+
+    <h2>Math Object Demo</h2>
+
+    <button onclick="mathDemo()">Show Math Operations</button>
+
+    <p id="output"></p>
+
+</body>
+</html>

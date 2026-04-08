@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Window Object Example</title>
+    <script>
+        function showDetails() {
+            // Window properties
+            let width = window.innerWidth;
+            let height = window.innerHeight;
+
+            // Display size
+            document.getElementById("size").innerHTML =
+                "Window Size: " + width + " x " + height;
+        }
+
+        function showAlert() {
+            window.alert("This is an alert box!");
+        }
+
+        function openNewWindow() {
+            window.open("https://www.google.com", "_blank");
+        }
+
+        function closeWindow() {
+            window.close();
+        }
+    </script>
+</head>
+<body>
+
+    <h2>Window Object Demo</h2>
+
+    <button onclick="showDetails()">Show Window Size</button>
+    <p id="size"></p>
+
+    <br>
+
+    <button onclick="showAlert()">Show Alert</button>
+
+    <br><br>
+
+    <button onclick="openNewWindow()">Open New Window</button>
+
+    <br><br>
+
+    <button onclick="closeWindow()">Close Window</button>
+
+</body>
+</html>

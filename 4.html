@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS Selectors Demo</title>
+
+<style>
+
+p {
+  color: green;
+}
+
+#title {
+  color: red;
+}
+
+.note {
+  background-color: lightyellow;
+}
+
+h2, h3 {
+  color: purple;
+}
+
+* {
+  font-family: Arial;
+}
+
+div p {
+  border: 3px solid red ;
+}
+
+div > span {
+  color: green;
+}
+
+h2 + p {
+  color: orange;
+}
+
+h2 ~ p {
+  background-color: yellow ;
+}
+
+a:hover {
+  color: red;
+}
+
+p::first-letter {
+  font-size: 24px;
+  color: brown;
+}
+
+input[type="text"] {
+  border: 2px solid rgb(20, 190, 34);
+}
+
+</style>
+</head>
+
+<body>
+
+<h1 id="title">CSS Selector Forms</h1>
+
+<h2>Group Selector Example</h2>
+<h3>Another Heading</h3>
+
+<p>This paragraph uses element selector.</p>
+
+<p class="note">This paragraph uses class selector.</p>
+
+<div>
+  <p>Descendant selector example.</p>
+  <span>Child selector example.</span>
+</div>
+
+<p>General sibling example.</p>
+
+<a href="#">Hover over this link</a>
+
+<br><br>
+
+<input type="text" placeholder="text here">
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Looping Example</title>
+    <script>
+        function showData() {
+
+            // Object
+            let person = {
+                name: "Alex",
+                age: 20,
+                city: "Vijayawada"
+            };
+
+            // Array
+            let fruits = ["Apple", "Banana", "Mango"];
+
+            let forInData = "";
+            let forEachData = "";
+            let forOfData = "";
+
+            // 1. for-in (used for object)
+            for (let key in person) {
+                forInData += key + ": " + person[key] + "<br>";
+            }
+
+            // 2. forEach (used for array)
+            fruits.forEach(function(item) {
+                forEachData += item + " ";
+            });
+
+            // 3. for-of (used for array)
+            for (let item of fruits) {
+                forOfData += item + " ";
+            }
+
+            // Display output
+            document.getElementById("output").innerHTML =
+                "<b>for-in (Object):</b><br>" + forInData + "<br>" +
+                "<b>forEach (Array):</b> " + forEachData + "<br>" +
+                "<b>for-of (Array):</b> " + forOfData;
+        }
+    </script>
+</head>
+<body onload="showData()">
+
+    <h2>Looping through Object and Array</h2>
+
+    <p id="output"></p>
+
+</body>
+</html>

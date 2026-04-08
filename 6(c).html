@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Input Methods</title>
+    <script>
+        // 1. Using prompt()
+        function getPromptInput() {
+            let name = prompt("Enter your name:");
+            document.getElementById("p1").innerHTML = "Prompt Input: " + name;
+        }
+
+        // 2. Using textbox (input field)
+        function getTextboxInput() {
+            let val = document.getElementById("textbox").value;
+            document.getElementById("p2").innerHTML = "Textbox Input: " + val;
+        }
+
+        // 3. Using textarea
+        function getTextareaInput() {
+            let val = document.getElementById("textarea").value;
+            document.getElementById("p3").innerHTML = "Textarea Input: " + val;
+        }
+    </script>
+</head>
+<body>
+
+    <h2>Different Ways to Take Input</h2>
+
+    <!-- 1. Prompt -->
+    <button onclick="getPromptInput()">Enter Name (Prompt)</button>
+    <p id="p1"></p>
+
+    <br>
+
+    <!-- 2. Textbox -->
+    <input type="text" id="textbox" placeholder="Enter something">
+    <button onclick="getTextboxInput()">Submit Textbox</button>
+    <p id="p2"></p>
+
+    <br>
+
+    <!-- 3. Textarea -->
+    <textarea id="textarea" placeholder="Enter multiple lines"></textarea>
+    <br>
+    <button onclick="getTextareaInput()">Submit Textarea</button>
+    <p id="p3"></p>
+
+</body>
+</html>

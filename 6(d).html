@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Voter Details</title>
+    <script>
+        function getVoterDetails() {
+            let name = prompt("Enter your name:");
+            let age = prompt("Enter your age:");
+
+            age = parseInt(age);
+
+            let status;
+            if (age >= 18) {
+                status = "Eligible to Vote";
+            } else {
+                status = "Not Eligible to Vote";
+            }
+
+            // Display in table
+            document.getElementById("result").innerHTML =
+                "<table border='1' cellpadding='10'>" +
+                "<tr><th>Name</th><th>Age</th><th>Status</th></tr>" +
+                "<tr><td>" + name + "</td><td>" + age + "</td><td>" + status + "</td></tr>" +
+                "</table>";
+        }
+    </script>
+</head>
+<body onload="getVoterDetails()">
+
+    <h2>Voter Information</h2>
+
+    <div id="result"></div>
+
+</body>
+</html>
